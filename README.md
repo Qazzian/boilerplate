@@ -26,8 +26,9 @@ SolidFoundation is intended to provide a full stack - end to end to allow me to 
 4. Grunt ( npm install -g grunt-cli )
 
 ### Installation
+(This assumes you wish to start a new application and not make changes to SolidFoundation itself).
 
-* Disconnect from the remote Git repo
+* Clone the repo to your computer and then disconnect from the main remote Git repo
 ```bash
     git remote remove
 ```
@@ -36,7 +37,10 @@ SolidFoundation is intended to provide a full stack - end to end to allow me to 
     git remote add [[APP_REPO]]
     git push origin
 ```
-* npm install
+* run npm install to download all the modules
+```bash
+    npm install
+```
 * Find & replace any references to SolidFoundation which are placeholders for your application's name. They appear in the nginx.conf, bower.json, config.js files
 * Add the API and APP domains (by default: api.solidfoundation.com, app.solidfoundation.com though you should have changed that in #4 above) to your /etc/hosts pointing back to 127.0.0.1
 * Develop to your heart's content
@@ -96,6 +100,20 @@ Using the current build in the "target" folder, this workflow will run jshint to
 Run all the testsm like "grunt test", but do so on a fresh build.
 ```bash
    grunt test:clean
+```
+
+### Workflow - internals
+
+##### Make
+Run Bower package manager to see if any new versions of the libraries are available.
+```bash
+   grunt make
+```
+
+##### Clean
+Clean the target folders removing the built code
+```bash
+   grunt clean
 ```
 
 ### File Structure
