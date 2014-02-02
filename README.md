@@ -1,10 +1,10 @@
 SolidFoundation
 ===============
 
-A starter project for a full JS stack end to end.
-It isn't unique, there are many like it, but this one is mine with my choice of components.
-If you want to build a project which is Javascript end to end, with integrated TDD workflows and proper seperation of Backend and front end - this might be the foundation for you.
-I've seen many projects like this before but they never took into account the importance of seperating your front end code from the Node.js server entirely - which allos you to reduce your server costs by placing static assets on a CDN and improves your application's modularity.
+A starter project for a full JS stack end to end.<br/>
+It isn't unique, there are many like it, but this one is mine with my choice of components.<br/>
+If you want to build a project which is Javascript end to end, with integrated TDD workflows and proper seperation of Backend and front end - this might be the foundation for you.<br/>
+I've seen many projects like this before but they never took into account the importance of seperating your front end code from the Node.js server entirely - which allows you to reduce your server costs by placing static assets on a CDN and improves your application's modularity.<br/>
 This is my approach, I hope if proves useful to others.
 
 ### The stack
