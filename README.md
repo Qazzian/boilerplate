@@ -10,7 +10,7 @@ This is my approach, I hope it proves useful to others.
 ### The stack
 SolidFoundation is intended to provide a full stack - end to end to allow me to get to past the setup stage quickly and straight to developing a client's application.
 
-The stack includes:
+The stack includes:<br/>
 1. A front end application built in Backbone.js with Marionette.js with dependencies on jQuery, Twitter Bootstrap and a few smaller libs.
 2. A back end application built in Node.js with Express.js to provide a RESTful API for the backbone application and as a starting point for any offline tasks we need.
 3. An integrated testing environment which tests the API code using Node.js and the Backbone application in a headless browser.
