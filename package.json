@@ -1,5 +1,5 @@
 {
-    "name": "__SOLID_FOUNDATION__",
+    "name": "SolidFoundation",
     "description": "A solid foundation of components and workflows for a Javascript based application from front end to back end to data storage and to testing",
     "version": "0.1.0",
     "author": "Gidi Meir Morris",
