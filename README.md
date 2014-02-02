@@ -67,8 +67,6 @@ Once it is running all you have to do is turn your browser to app.solidfoundatio
 ```bash
    grunt server:dev
 ```
-   grunt server
-```
 
 ##### Server:TDD
 Works like the Server:Dev workflow only in addition to rebuilding the active servers as you make changes the workflow will also run your tests - giving you immediate notification of code which breaks while your developing it.
@@ -115,3 +113,8 @@ Run all the testsm like "grunt test", but do so on a fresh build.
 - bower.json - config for the frontend package manager
 - Gruntfile.js - the grunt configuration which manages all our workflows
 - package.json - the configuration for the Node package manager
+
+
+### Open Issues
+1. There is a problem with the CORS implementation. Something to do with headers no being passed to the Express.js code properly.
+For now a stub has been placed in the CRUDables collection on the front end to allow the demo to work, but the code in the API and the APP work perfectly, the problem is in the bridge throught the nginx.
