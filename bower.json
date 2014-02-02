@@ -1,0 +1,73 @@
+{
+    "name": "__SOLID_FOUNDATION__",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "jquery": "~1.10.2",
+        "jqueryui": "~1.10.2",
+        "jquery.cookie": "1.4.0",
+        "underscore": "~1.5.2",
+        "bootstrap": "3.0.3",
+        "backbone": "~1.1.0",
+        "backbone.marionette": "~1.4.1",
+        "Backbone.validateAll": "latest",
+        "require-handlebars-plugin" : "*",
+        "r.js" : "2.1.2",
+        "birdwatcherjs": "*",
+        "text" : "",
+        "almond" : ""
+    },
+    "devDependencies": {
+        "jasmine": "~1.3.1",
+        "html5-boilerplate": "latest"
+    },
+    "exportsOverride": {
+        "jquery": {
+            "js": "jquery.js"
+        },
+        "jqueryui": {
+            "js": "jquery-ui.js"
+        },
+        "r.js": {
+            "js": ["require.js","dist/r.js"]
+        },
+        "jquery.cookie": {
+            "js": "*.js"
+        },
+        "underscore": {
+            "js": "underscore.js"
+        },
+        "almond": {
+            "js": "almond.js"
+        },
+        "Backbone.validateAll": {
+            "js": "src/javascripts/Backbone.validateAll.js"
+        },
+        "backbone": {
+            "js": "backbone.js"
+        },
+        "text": {
+            "js": "text.js"
+        },
+        "birdwatcherjs": {
+            "js": "birdwatcher.js"
+        },
+        "require-handlebars-plugin": {
+            "js": ["hbs.js"],
+            "js/hbs": ["hbs/handlebars.js","hbs/json2.js","hbs/i18nprecompile.js","hbs/underscore.js"]
+        },
+        "backbone.marionette": {
+            "js": "lib/backbone.marionette.js"
+        },
+        "bootstrap": {
+            "js": "dist/js/bootstrap.js",
+            "css": "dist/css/bootstrap.css",
+            "fonts": "dist/fonts/glyphicons-halflings-regular.*"
+        },
+        "html5-boilerplate": {
+            "css": "css/*.css",
+            "js": ["js/plugins.js", "js/vendor/modernizr*.js"]
+        },
+        "jasmine": {}
+    }
+}

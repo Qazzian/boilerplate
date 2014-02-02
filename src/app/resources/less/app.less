@@ -1,0 +1,56 @@
+@import "bootstrap/bootstrap.less";
+
+.loading {
+  display: block;
+  min-height: 50px;
+  min-width: 50px;
+  background: url(/resources/img/loader.gif) no-repeat center center;
+}
+
+footer.footer {
+  display: block;
+  text-align: center;
+}
+
+#main {
+  margin-top: 70px;
+
+  .layout-menu-details {
+    display: block;
+    line-height: 25px;
+
+    .menu {
+      display: inline-block;
+    }
+    .content {
+      display: inline-block;
+      margin-left: 18px;
+      vertical-align: top;
+      min-width: 50%;
+
+      margin-left: 0;
+      margin-right: 0;
+      background-color: #fff;
+      border-width: 1px;
+      border-color: #ddd;
+      border-radius: 4px 4px 0 0;
+      box-shadow: none;
+    }
+  }
+
+  .nav {
+    display: inline-block;
+    .glyphicon-user:before {
+      margin-right: 10px;
+    }
+  }
+
+
+  /* Error Message fields */
+  .has-error {
+    .well;
+    p.bg-danger {
+      padding: 15px;
+    }
+  }
+}
