@@ -11,12 +11,12 @@ This is my approach, I hope it proves useful to others.
 SolidFoundation is intended to provide a full stack - end to end to allow me to get to past the setup stage quickly and straight to developing a client's application.
 
 The stack includes:<br/>
-1. A front end application built in Backbone.js with Marionette.js with dependencies on jQuery, Twitter Bootstrap and a few smaller libs.
-2. A back end application built in Node.js with Express.js to provide a RESTful API for the backbone application and as a starting point for any offline tasks we need.
-3. An integrated testing environment which tests the API code using Node.js and the Backbone application in a headless browser.
-4. A Test Driver Development environment that reloads the code and tests it as you develop it. This allows us to get immediate feedback when code breaks.
-5. Using nginx as a reverse proxy for the Node.js application we separate the API and Backbone applications completely under seperate sub domains- the API is at api.solidfoundation.com and the Backbone app is at app.solidfoundation.com. This means we will have no problem placing the front end app on a CDN later and only have to worry about hosting our REST api without having to develop anything else.
-6. An integrated workflow and build environment using Grunt.js to provide many options when developing (see the Workflow section below.
+1.A front end application built in Backbone.js with Marionette.js with dependencies on jQuery, Twitter Bootstrap and a few smaller libs.
+2.A back end application built in Node.js with Express.js to provide a RESTful API for the backbone application and as a starting point for any offline tasks we need.
+3.An integrated testing environment which tests the API code using Node.js and the Backbone application in a headless browser.
+4.A Test Driver Development environment that reloads the code and tests it as you develop it. This allows us to get immediate feedback when code breaks.
+5.Using nginx as a reverse proxy for the Node.js application we separate the API and Backbone applications completely under seperate sub domains- the API is at api.solidfoundation.com and the Backbone app is at app.solidfoundation.com. This means we will have no problem placing the front end app on a CDN later and only have to worry about hosting our REST api without having to develop anything else.
+6.An integrated workflow and build environment using Grunt.js to provide many options when developing (see the Workflow section below.
 
 ### Prerequisites
 1. Node (brew install node )
@@ -26,19 +26,19 @@ The stack includes:<br/>
 
 ### Installation
 
-1. Disconnect from the remote Git repo
+#1 Disconnect from the remote Git repo
 ```bash
     git remote remove
 ```
-2. Create a new repo in github and add it as the remote for this new repo and push and update key in package.json
+#2 Create a new repo in github and add it as the remote for this new repo and push and update key in package.json
 ```bash
     git remote add [[APP_REPO]]
     git push origin
 ```
-3. npm install
-4. Find & replace any references to SolidFoundation which are placeholders for your application's name. They appear in the nginx.conf, bower.json, config.js files
-5. Add the API and APP domains (by default: api.solidfoundation.com, app.solidfoundation.com though you should have changed that in #4 above) to your /etc/hosts pointing back to 127.0.0.1
-6. Develop to your heart's content
+#3 npm install
+#4 Find & replace any references to SolidFoundation which are placeholders for your application's name. They appear in the nginx.conf, bower.json, config.js files
+#5 Add the API and APP domains (by default: api.solidfoundation.com, app.solidfoundation.com though you should have changed that in #4 above) to your /etc/hosts pointing back to 127.0.0.1
+#6 Develop to your heart's content
 
 ### Workflow - development
 
