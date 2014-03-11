@@ -1,6 +1,6 @@
 (function(window,document, UA, undefined) {
 
-    window._solidfoundation = window._solidfoundation || {};
+    window._boilerplate = window._boilerplate || {};
 
 
     // The safest thing is always searching for a local script tag because on a malformed page you
@@ -17,7 +17,7 @@
         referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
     }
 
-    window._solidfoundation.inject = {
+    window._boilerplate.inject = {
             css: function(src, callback) {
                 var styleTag = document.createElement("link");
                 styleTag.type = "text/css";
@@ -99,9 +99,9 @@
     var configType = ((/iPhone|iPod|iPad|Android|BlackBerry|Opera Mini|IEMobile/).test(UA)? 'thin' : 'rich');
 
     // check the config, load the files by order by passing the arguments from the config to the specified function
-    if(window._solidfoundation.config && window._solidfoundation.config[configType] instanceof Array) {
+    if(window._boilerplate.config && window._boilerplate.config[configType] instanceof Array) {
 
-        var filesToLoad = window._solidfoundation.config[configType].splice(0,window._solidfoundation.config[configType].length);
+        var filesToLoad = window._boilerplate.config[configType].splice(0,window._boilerplate.config[configType].length);
         /***
          * Inject all the files one after the next - like a ful blown loader would do
          * @param curr
@@ -112,7 +112,7 @@
                 files = curr;
                 curr = files.shift();
             }
-            if(curr.type && typeof window._solidfoundation.inject[curr.type] == 'function' && curr.args instanceof Array) {
+            if(curr.type && typeof window._boilerplate.inject[curr.type] == 'function' && curr.args instanceof Array) {
 
                 //add callback at end to call next file
                 curr.args.push(function(){
@@ -121,7 +121,7 @@
                     }
                 });
 
-                window._solidfoundation.inject[curr.type].apply(window,curr.args);
+                window._boilerplate.inject[curr.type].apply(window,curr.args);
             }
         };
 

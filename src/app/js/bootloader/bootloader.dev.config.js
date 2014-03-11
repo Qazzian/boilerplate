@@ -1,8 +1,8 @@
 (function (window, document, undefined) {
 
-    window._solidfoundation = window._solidfoundation || {};
+    window._boilerplate = window._boilerplate || {};
 
-    window._solidfoundation.config = {
+    window._boilerplate.config = {
         thin: [
             // basic style - load first so we have a loader image ASAP
             {type: 'css', args: ["resources/css/application.thin.css"]},

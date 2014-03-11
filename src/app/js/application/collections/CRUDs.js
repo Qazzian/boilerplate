@@ -2,7 +2,7 @@ define(["jquery", "backbone", "models/CRUD"],
     function ($, Backbone, Model) {
         // Creates a new Backbone Collection class object
         var Collection = Backbone.Collection.extend({
-            url: '//api.solidfoundation.com/crudable?raw=true',
+            url: '//api.Qazzian.com/crudable?raw=true',
             // Tells the Backbone Collection that all of it's models will be of type Model (listed up top as a dependency)
             model: Model,
             fetch: function (options) {

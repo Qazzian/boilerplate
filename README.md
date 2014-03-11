@@ -1,4 +1,4 @@
-SolidFoundation
+boilerplate
 ===============
 
 A starter project for a full JS stack end to end.<br/>
@@ -8,14 +8,14 @@ I've seen many projects like this before but they never took into account the im
 This is my approach, I hope it proves useful to others.
 
 ### The stack
-SolidFoundation is intended to provide a full stack - end to end to allow me to get to past the setup stage quickly and straight to developing a client's application.
+boilerplate is intended to provide a full stack - end to end to allow me to get to past the setup stage quickly and straight to developing a client's application.
 
 ####The stack includes:
 1. A front end application built in **Backbone.js** with **Marionette.js** with dependencies on **jQuery, Twitter Bootstrap** and a few smaller libs.
 2. A back end application built in **Node.js** with **Express.js** to provide a **RESTful API** for the backbone application and as a starting point for any offline tasks we need.
 3. An **integrated testing environment** which tests the API code using Node.js and the Backbone application in a headless browser.
 4. A **Test Driven Development** environment that reloads the code and tests it as you develop it. This allows us to get immediate feedback when code breaks.
-5. Using **nginx** as a reverse proxy for the Node.js application we separate the API and Backbone applications completely under seperate sub domains- the API is at api.solidfoundation.com and the Backbone app is at app.solidfoundation.com. This means we will have no problem placing the front end app on a CDN later and only have to worry about hosting our REST api without having to develop anything else.
+5. Using **nginx** as a reverse proxy for the Node.js application we separate the API and Backbone applications completely under seperate sub domains- the API is at api.qazzian.com and the Backbone app is at app.qazzian.com. This means we will have no problem placing the front end app on a CDN later and only have to worry about hosting our REST api without having to develop anything else.
 6. An integrated workflow and build environment using **Grunt.js** to provide many options when developing (see the Workflow section below.
 7. Data storage is provided using **MongoDB** and **Mongoose** in the Node.js application
 
@@ -26,7 +26,7 @@ SolidFoundation is intended to provide a full stack - end to end to allow me to 
 4. Grunt ( npm install -g grunt-cli )
 
 ### Installation
-(This assumes you wish to start a new application and not make changes to SolidFoundation itself).
+(This assumes you wish to start a new application and not make changes to boilerplate itself).
 
 * Clone the repo to your computer and then disconnect from the main remote Git repo
 ```bash
@@ -41,8 +41,8 @@ SolidFoundation is intended to provide a full stack - end to end to allow me to 
 ```bash
     npm install
 ```
-* Find & replace any references to SolidFoundation which are placeholders for your application's name. They appear in the nginx.conf, bower.json, config.js files
-* Add the API and APP domains (by default: api.solidfoundation.com, app.solidfoundation.com though you should have changed that in #4 above) to your /etc/hosts pointing back to 127.0.0.1
+* Find & replace any references to boilerplate which are placeholders for your application's name. They appear in the nginx.conf, bower.json, config.js files
+* Add the API and APP domains (by default: api.qazzian.com, app.qazzian.com though you should have changed that in #4 above) to your /etc/hosts pointing back to 127.0.0.1
 * Develop to your heart's content
 
 ### Workflow - development
@@ -51,15 +51,15 @@ Using Grunt.js there are 7 different workflows you can use for different things.
 
 ##### Server:build
 To rebuild the code (which in turn is placed in the "target" folder) and then start the nginx, Mongo and Node servers.
-Once it is running all you have to do is turn your browser to app.solidfoundation.com.
-Note that depending on how you setuo your nginx installation you may have to use sudo as it stops and starts nginx.
+Once it is running all you have to do is turn your browser to app.qazzian.com.
+Note that depending on how you setup your nginx installation you may have to use sudo as it stops and starts nginx.
 ```bash
    grunt server:build
 ```
 
 ##### Server
 Start the nginx, Mongo and Node servers based on the source which is already in the target folder.
-Once it is running all you have to do is turn your browser to app.solidfoundation.com.
+Once it is running all you have to do is turn your browser to app.qazzian.com.
 ```bash
    grunt server
 ```
@@ -68,7 +68,7 @@ Once it is running all you have to do is turn your browser to app.solidfoundatio
 Rebuild the code, start the nginx, Mongo and Node servers and turn on the watches.
 This is the ideal workflow for development - whener you save your code the build will run again and redeploy to your target folder allowing you to simply refresh the browser and use the new code.
 It will update both the Front and Back end as you develop.
-Once it is running all you have to do is turn your browser to app.solidfoundation.com.
+Once it is running all you have to do is turn your browser to app.qazzian.com.
 ```bash
    grunt server:dev
 ```
